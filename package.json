@@ -1,0 +1,25 @@
+{
+  "name": "taylor_made_website_for_larry",
+  "version": "1.0.0",
+  "description": "Larrys first website",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asdfzt/taylor_made_website_for_larry.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Larry Stofer and Zack Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asdfzt/taylor_made_website_for_larry/issues"
+  },
+  "homepage": "https://github.com/asdfzt/taylor_made_website_for_larry#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}
