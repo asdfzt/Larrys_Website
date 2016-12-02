@@ -19,6 +19,16 @@
 
   }
 
+  db.ref('messages/').once('value').then(function(snapshot) {
+    let value = snapshot.val()[9];
+    console.log(snapshot.val());
+    var dataid = document.getElementById('dataid');
+
+    dataid.innerHTML = value.message;
+
+
+  });
+
   function writeMessage (email, message) {
     var key = (Math.random(1,10) * 10).toFixed(0).toString(10);
     db.ref('messages/' + key).set({
@@ -36,22 +46,11 @@
         <ul class="nav nav-tabs">
           <li role="presentation"><a href="../index.html">Home</a></li>
           <li role="presentation"><a href="../bio/larryBio.html">Profile</a></li>
-          <li role="presentation" class="active"><a href="#">Messages</a></li>
-          <li role="presentation"><a href="../adminMessagePage/control.html">Admin</a></li>
+          <li role="presentation"><a href="../messages/messages.html">Messages</a></li>
+          <li role="presentation" class="active"><a href="#">Admin</a></li>
         </ul>
     </head>
     <body>
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleTextarea">Example textarea</label>
-          <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-        </div>
-        <a onclick="submitClick()" id="clickme" class="btn btn-lg btn-primary">Submit</a>
-      </form>
+      <span id="dataid"></span>
     </body>
 </html>
